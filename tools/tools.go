@@ -74,9 +74,6 @@ type EmulatorModel struct {
 // NewEmulator ...
 func NewEmulator(androidHomeDir string) (*EmulatorModel, error) {
 	emulatorPth := filepath.Join(androidHomeDir, "tools", "emulator")
-	if runtime.GOOS == "linux" {
-		emulatorPth = filepath.Join(androidHomeDir, "tools", "emulator64-arm")
-	}
 	if exist, err := pathutil.IsPathExists(emulatorPth); err != nil {
 		return nil, fmt.Errorf("failed to check if emulator exist, error: %s", err)
 	} else if !exist {
