@@ -91,7 +91,7 @@ func (emulator EmulatorModel) StartEmulatorCmd(name, skin string, options ...str
 	} else {
 		args = append(args, "-skin", skin)
 	}
-
+	args = append(args, "-force-32bit")
 	args = append(args, options...)
 
 	return command.New(args[0], args[1:]...)
