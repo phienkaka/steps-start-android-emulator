@@ -3,7 +3,6 @@ package tools
 import (
 	"fmt"
 	"path/filepath"
-	"runtime"
 
 	"github.com/bitrise-io/go-utils/command"
 	"github.com/bitrise-io/go-utils/pathutil"
